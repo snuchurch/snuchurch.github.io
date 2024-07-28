@@ -1,1 +1,1 @@
-# snuchurch.github.io
+# Official Website for SNU Church
