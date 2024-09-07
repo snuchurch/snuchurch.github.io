@@ -9,7 +9,7 @@
 	</head>
 	<style>
 		#banner{
-			background-image:  url("images/worshipgif.gif");
+			background-image:  url("images/snuchurch_gif.gif");
 		}
 	</style>
 	<body class="is-preload">
@@ -64,10 +64,9 @@
 
 				<!-- Main -->
 					<div id="main">
-						
 						<style>
 							#biblequote {
-								background-color: rgb(63, 114, 83);							  
+								background-color: #DCBFA5;
 							}
 						</style>
 						<!-- One -->
@@ -168,5 +167,19 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				async function fetchWebsiteData(url) {
+					try {
+						const response = await fetch(url);
+						if(!response.ok) {
+							throw new Error('Network response was not ok '+ response.statusText)
+						}
+						const text = await response.text();
+						document.getElementById('content').innerHTML = text;
+					} catch (error) {
+						document.getElementById('content').innerHTML = 'Error ${error.message}';
+					}
+				}
+			</script>
 	</body>
 </html>
