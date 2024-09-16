@@ -2249,6 +2249,11 @@ input, select, textarea {
 			padding-left: 0.5em;
 		}
 
+		ul li img {
+			vertical-align: middle;
+			height: 2em;
+		}
+
 		ul.alt {
 			list-style: none;
 			padding-left: 0;
@@ -2761,7 +2766,7 @@ input, select, textarea {
 			min-height: 23em;
 			overflow: hidden;
 			position: relative;
-			width: 40%;
+			width: 60%;
 		}
 
 			.tiles article .image {
@@ -2840,7 +2845,7 @@ input, select, textarea {
 			}
 
 			.tiles article:nth-child(4n - 1), .tiles article:nth-child(4n - 2) {
-				width: 60%;
+				width: 40%;
 			}
 
 			/* .tiles article:nth-child(6n - 5):before {
@@ -2951,7 +2956,6 @@ input, select, textarea {
 			-webkit-flex-direction: row;
 			-ms-flex-direction: row;
 			flex-direction: row;
-			background-color: #ffffff;
 		}
 
 			.spotlights > section > .image {
@@ -3013,7 +3017,6 @@ input, select, textarea {
 				-webkit-flex-direction: row-reverse;
 				-ms-flex-direction: row-reverse;
 				flex-direction: row-reverse;
-				background-color: #ffffff;
 			}
 
 				.spotlights > section:nth-child(2n) > .content {
@@ -3402,7 +3405,6 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		background-image: url("../../images/snuchurch_gif.gif");
 		color: #ffffff;
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -3747,6 +3749,13 @@ input, select, textarea {
 		}
 
 /* Footer */
+	#footer {
+		font-size: 0.9em;
+	}
+
+	#footer .inner {
+		border-top: solid 2px #88674f;
+	}
 
 	#footer .copyright {
 		font-size: 0.8em;
@@ -3992,7 +4001,7 @@ input, select, textarea {
 			visibility: visible;
 		}
 
-#blue {
+blue {
 	color: #2A7DE1;
 }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<link rel="icon" type="image/svg+xml" href="images/logo_rounded.svg">
+		<link rel="icon" type="image/svg+xml" href="assets/images/logo_rounded.svg">
 		<title>SNU Church</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -10,198 +10,218 @@
 	</head>
 	<body class="is-preload">
 			<div id="wrapper">
-					<header id="header" class="alt">
-						<a href="index.html" class="logo">
-							<img src="images/logo_rounded.svg" /> 
-							<span lang="ko">서울대학교회</span>
-							<span lang="en">SNUC</span>
-						</a>
-						<nav>
-							<!--lang="en"-->
-							<a lang="en" class="language-selector" data-lang="en"><mark>English</mark></a>
-							<a lang="en" class="language-selector" data-lang="ko">한국어</a>
-							<!--lang="en"-->
-							<a lang="ko" class="language-selector" data-lang="en">English</a>
-							<a lang="ko" class="language-selector" data-lang="ko"><mark>한국어</mark></a>
-							<a href="#menu"><span lang="ko">메뉴</span><span lang="en">Menu</span></a>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html"><p lang="en">Welcome</p><p lang="ko">환영합니다</p></a></li>
-							<li><a href="introduction.html"><p lang="en">About Us</p><p lang="ko">교회 소개</p></a></li>
-							<li><a href="service.html"><p lang="en">Service</p><p lang="ko">예배</p></a></li>
-							<li><a href="participate.html" class="button primary fit"><p lang="en">Get Inolved</p><p lang="ko">참여하기</p></a></li>
-						</ul>
+				<!-- Header (Same across all pages) -->
+				<header id="header" class="alt">
+					<a href="index.html" class="logo">
+						<img src="assets/images/logo_rounded.svg" /> 
+						<span lang="ko">서울대학교회</span>
+						<span lang="en">SNUC</span>
+					</a>
+					<nav>
+						<!--lang="en"-->
+						<a lang="en" class="language-selector" data-lang="en"><mark>English</mark></a>
+						<a lang="en" class="language-selector" data-lang="ko">한국어</a>
+						<!--lang="en"-->
+						<a lang="ko" class="language-selector" data-lang="en">English</a>
+						<a lang="ko" class="language-selector" data-lang="ko"><mark>한국어</mark></a>
+						<!-- MENU/메뉴 -->
+						<a href="#menu"><span lang="ko">메뉴</span><span lang="en">Menu</span></a>
 					</nav>
+				</header>
+				<!-- Menu (Same across all pages)-->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="index.html"><p lang="en">Welcome</p><p lang="ko">환영합니다</p></a></li>
+						<li><a href="pages/introduction.html"><p lang="en">About Us</p><p lang="ko">교회 소개</p></a></li>
+						<li><a href="pages/service.html"><p lang="en">Service</p><p lang="ko">예배</p></a></li>
+						<li><a href="pages/participate.html" class="button primary fit"><p lang="en">Get Inolved</p><p lang="ko">참여하기</p></a></li>
+					</ul>
+				</nav>
 
-				<!-- Banner -->
-				 
-					<section id="banner" class="major">
+
+
+
+				<!-- Banner (Main Banner)-->
+				<style>
+					#banner {
+						background-image: url("/assets/images/snuchurch_gif.gif");
+					}
+				</style>
+				<section id="banner" class="major">
+					<div class="inner">
+						<header class="major">
+							<h1>
+								<img src="assets/images/logo_rounded.svg"/><br>
+								<span lang="ko">서울대학교회</span>
+								<span lang="en">SNU Church</span>
+							</h1>
+						</header>
+						<div class="content">
+							<p lang="en">
+								Welcome to Seoul National University Church!
+							</p>
+							<p lang="ko">
+								서울대학교회에 오신 여러분을 환영합니다!
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Main -->
+				<div id="main">
+					<section id="biblequote">
 						<div class="inner">
-							<header class="major">
-								<h1>
-									<img src="images/logo_rounded.svg"/><br>
-									<span lang="ko">서울대학교회</span>
-								    <span lang="en">SNU Church</span>
-								</h1>
+							<header class="major" lang="en">
+								<h3 id="black">John 14:6</h3>
 							</header>
-							<div class="content">
-								<p lang="en">
-									Welcome to Seoul National University Church!
-								</p>
-								<p lang="ko">
-									서울대학교회에 오신 여러분을 환영합니다!
-								</p>
-							</div>
+							<p lang="en">
+								Jesus answered, "I am the way and the truth and the life. No one comes to the Father except through me."
+							</p>
+							<header class="major" lang="ko">
+								<h3 id="black">요한복음 14:6</h3>
+							</header>
+							<p lang="ko">
+								그래서 예수님이 그에게 말씀하셨다. "나는 길이요 진리요 생명이다. 나를 통하지 않고는 아무도 아버지꼐로 가지 못한다."
+							</p>
 						</div>
 					</section>
 
-				<!-- Main -->
-					<div id="main">
-						<section id="biblequote">
-							<div class="inner">
-								<header class="major">
-									<h3 lang="en" id="black">John 14:6</h3>
-									<h3 lang="ko" id="black">요한복음 14:6</h3>
-								</header>
-								<p lang="en">
-									Jesus answered, "I am the way and the truth and the life. No one comes to the Father except through me."
-								</p>
-								<p lang="ko">
-									그래서 예수님이 그에게 말씀하셨다. "나는 길이요 진리요 생명이다. 나를 통하지 않고는 아무도 아버지꼐로 가지 못한다."
-								</p>
-							</div>
-						</section>
+					<style>
+						#menu_tiles {
+							color: #ffffff
+						}
+						#menu_tiles h1, h2, h3, h4 {
+							color: #ffffff
+						}
+						#menu_tiles header.major > :first-child:after {
+							content: '';
+							background-color: #FFFFFF;
+							display: block;
+							height: 2px;
+							margin: 0.325em 0 0.5em 0;
+							width: 100%;
+						}
+					</style>
+					<section id="menu_tiles" class="tiles">
+						<article>
+							<span class="image">
+								<img src="assets/images/240407.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h3>
+									<a href="pages/introduction.html" class="link" lang="en">SNU Church</a>
+									<a href="pages/introduction.html" class="link" lang="ko">서울대학교회</a>
+								</h3>
+								<p lang="en">About Us</p>
+								<p lang="ko">교회 소개</p>
+							</header>
+						</article>
+						<article>
+							<span class="image">
+								<img src="assets/images/worship_pic.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h3>
+									<a href="pages/service.html" class="link" lang="en">Sunday Service</a>
+									<a href="pages/service.html" class="link" lang="ko">주일 예배</a>
+								</h3>
+								<p lang="en">Morning Service, Afternoon Service</p>
+								<p lang="ko">오전 예배, 오후 예배</p>
+							</header>
+						</article>
+						<article>
+							<span class="image">
+								<img src="assets/images/sermon_recording.png" alt="" />
+							</span>
+							<header class="major">
+								<h3>
+									<a href="pages/service.html#videos" class="link" lang="en">Sermon</a>
+									<a href="pages/service.html#videos" class="link" lang="ko">말씀</a>
+								</h3>
+								<p lang="en">Sermon Recordings</p>
+								<p lang="ko">말씀 녹화 영상</p>
+							</header>
+						</article>
+						<article>
+							<span class="image">
+								<img src="assets/images/activity.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h3>
+									<a href="pages/ministry.html" class="link" lang="en">Ministries and Activities</a>
+									<a href="pages/ministry.html" class="link" lang="ko">사역과 활동</a>
+								</h3>
+								<p lang="en">Church and Community Activities</p>
+								<p lang="ko">교회와 공동체 활동</p>
+							</header>
+						</article>
+						<article>
+							<span class="image">
+								<img src="assets/images/logo_horizontal.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h3>
+									<a href="pages/participate.html" class="link" lang="en">Get Involved</a>
+									<a href="pages/participate.html" class="link" lang="ko">참여하기</a>
+								</h3>
+								<p lang="en">Join us and grow in faith together!</p>
+								<p lang="ko">함께 신앙 안에서 성장해봐요!</p>
+							</header>
+						</article>
+					</section>
+					<p><br></p>
+				</div>
 
-						<!-- Two -->
-						<style>
-							#two {
-								color: #ffffff
-							}
-							#two h1, h2, h3, h4 {
-								color: #ffffff
-							}
-							#two header.major > :first-child:after {
-								content: '';
-								background-color: #FFFFFF;
-								display: block;
-								height: 2px;
-								margin: 0.325em 0 0.5em 0;
-								width: 100%;
-							}
-						</style>
-							<section id="two" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/240407.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3>
-											<a href="introduction.html" class="link" lang="en">SNU Church</a>
-											<a href="introduction.html" class="link" lang="ko">서울대학교회</a>
-										</h3>
-										<p lang="en">About Us</p>
-										<p lang="ko">교회 소개</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/worship_pic.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3>
-											<a href="service.html" class="link" lang="en">Sunday Service</a>
-											<a href="service.html" class="link" lang="ko">주일 예배</a>
-										</h3>
-										<p lang="en">Morning Service, Afternoon Service</p>
-										<p lang="ko">오전 예배, 오후 예배</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/sermon_recording.png" alt="" />
-									</span>
-									<header class="major">
-										<h3>
-											<a href="service.html#videos" class="link" lang="en">Sermon</a>
-											<a href="landing.html#videos" class="link" lang="ko">말씀</a>
-										</h3>
-										<p lang="en">Sermon Recordings</p>
-										<p lang="ko">말씀 녹화 영상</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/activity.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3>
-											<a href="ministry.html" class="link" lang="en">Ministries and Activities</a>
-											<a href="ministry.html" class="link" lang="ko">사역과 활동</a>
-										</h3>
-										<p lang="en">Church and Community Activities</p>
-										<p lang="ko">교회와 공동체 활동</p>
-									</header>
-								</article>
-							</section>
-
-						<div class="inner">
-							
-						</div>
-					</div>
-
-					<!-- Contact -->
-
-				
-				<!-- Footer -->
+				<!-- Footer and Contacts (Same across all pages) -->
 				<footer id="footer">
 					<div class="inner">
 						<div class="row">
-							<div class="col-4 col-12">
+							<div class="column">
 								<p>
-									<span class="icon solid alt fa-envelope"></span> 
-									Email <br>
+									<span class="icon solid fa-envelope"></span> 
 									snuchurch.info@gmail.com
 								</p>
-							</div>
-							<div class="col-4 col-12">
-								<p><span class="icon solid alt fa-phone"></span> 
-									Phone<br>
+								<p>
+									<span class="icon solid fa-phone"></span> 
 									(+82) 000-0000-0000
 								</p>
-							</div>
-							<div class="col-4 col-12">
-								<p><span class="icon solid alt fa-home"></span> 
-									Address<br>
-									Seoul National University Building 26, Room B101
+								<p>
+									<span class="icon solid fa-home"></span> 
+									<a href="https://place.map.kakao.com/17912381" lang="ko">서울대학교 26동 B101호 (자연대)</a>
+									<a href="https://place.map.kakao.com/17912381" lang="en">Seoul National University Building 26, Room B101</a>
 								</p>
 							</div>
+							<div class="column">
+								<p lang="ko">오전 예배 (한국어 & 영어)</p>
+								<p lang="en">Morning Service (Korean & English)</p>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/p/Seoul-National-University-Church-100064642604158/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/snuchurch_26/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.youtube.com/@snuchurch9178" class="icon brands alt fa-youtube"><span class="label">Youtube</span></a></li>
+								</ul>
+								<p lang="ko">오후 예배 (한국어 & 중국어)</p>
+								<p lang="en">Afternoon Service (Korean & Chinese)</p>
+								<ul class="icons">
+									<li><a href="https://www.instagram.com/snu_church/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.youtube.com/@user-ej2bw9vq8l" class="icon brands alt fa-youtube"><span class="label">Youtube</span></a></li>
+								</ul>
+							</div>
 						</div>
-						<ul class="icons">
-							<li><a href="https://www.facebook.com/p/Seoul-National-University-Church-100064642604158/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.instagram.com/snuchurch_26/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://www.instagram.com/snu_church/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/snuchurch" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
 						<ul class="copyright">
 							<li>&copy;SNUC 2024</li>
 							<li>Design Reference: <a href="https://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</div>
 				</footer>
-
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
