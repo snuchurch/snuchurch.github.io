@@ -3437,6 +3437,7 @@ input, select, textarea {
 		vertical-align: middle;
 		height: 2em;
 		margin-right: 0.5em;
+		margin-bottom: 0.2em;
 	}
 
 		#banner:after {
