@@ -2848,29 +2848,35 @@ input, select, textarea {
 				width: 40%;
 			}
 
-			/* .tiles article:nth-child(6n - 5):before {
+			.tiles article:nth-child(6n - 5) {
 				background-color: #6fc3df;
+				opacity: 0.6;
 			}
 
-			.tiles article:nth-child(6n - 4):before {
-				background-color: #8d82c4;
-			}
-
-			.tiles article:nth-child(6n - 3):before {
-				background-color: #ec8d81;
-			}
-
-			.tiles article:nth-child(6n - 2):before {
+			.tiles article:nth-child(6n - 4) {
 				background-color: #e7b788;
+				opacity: 0.6;
 			}
 
-			.tiles article:nth-child(6n - 1):before {
-				background-color: #8ea9e8;
+			.tiles article:nth-child(6n - 3) {
+				background-color: #ec8d81;
+				opacity: 0.6;
 			}
 
-			.tiles article:nth-child(6n):before {
+			.tiles article:nth-child(6n - 2) {
+				background-color: #8d82c4;
+				opacity: 0.6;
+			}
+
+			.tiles article:nth-child(6n - 1) {
 				background-color: #87c5a4;
-			} */
+				opacity: 0.6;
+			}
+
+			.tiles article:nth-child(6n) {
+				background-color: #8ea9e8;
+				opacity: 0.6;
+			}
 
 		@media screen and (max-width: 1280px) {
 
