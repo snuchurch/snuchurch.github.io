@@ -3429,6 +3429,7 @@ input, select, textarea {
 		min-height: 22em;
 		position: relative;
 		top: -3.25em;
+		overflow: hidden;
 	}
 	#banner h1 {
 		color:#ffffff;
