@@ -3584,6 +3584,12 @@ input, select, textarea {
 				background-attachment: scroll;
 			}
 
+			#banner-video {
+				min-width: 100vw;
+				min-height: 100vh;
+				object-fit: cover;
+			}
+
 		}
 
 		@media screen and (max-width: 736px) {
@@ -3595,6 +3601,12 @@ input, select, textarea {
 				max-height: none;
 				min-height: 0;
 				top: -2.75em;
+			}
+
+			#banner-video {
+				min-width: 100vw;
+				min-height: 100vh;
+				object-fit: cover;
 			}
 
 				#banner h1 {
