@@ -2848,7 +2848,7 @@ input, select, textarea {
 				width: 40%;
 			}
 
-			.tiles article:nth-child(6n - 5) {
+			/* .tiles article:nth-child(6n - 5) {
 				background-color: #6fc3df;
 				opacity: 0.6;
 			}
@@ -2876,7 +2876,7 @@ input, select, textarea {
 			.tiles article:nth-child(6n) {
 				background-color: #8ea9e8;
 				opacity: 0.6;
-			}
+			} */
 
 		@media screen and (max-width: 1280px) {
 
@@ -3444,7 +3444,6 @@ input, select, textarea {
 	#banner img{
 		vertical-align: middle;
 		height: 2em;
-		margin-right: 0.5em;
 		margin-bottom: 0.2em;
 	}
 
@@ -3472,7 +3471,7 @@ input, select, textarea {
 
 		#banner h1 {
 			font-size: 4em;
-			line-height: normal;
+			line-height: 1.3em;
 		}
 
 		#banner > .inner {

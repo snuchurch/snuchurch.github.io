@@ -44,12 +44,45 @@
 
 				<!-- Banner (Main Banner)-->
 				<style>
-					#banner {
-						/*background-image: url("/assets/images/main_banner_bg.jpg");*/
-						background-image: url("assets/images/snuchurch_gif.gif");
+					#banner-video {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						min-width: 100%;
+						min-height: 100%;
+						width: auto;
+						height: auto;
+						z-index: -1;
+						transform: translate(-50%, -50%);
+						object-fit: cover;
+						opacity: 1; /* Adjust the opacity for a darker overlay effect */
+					}
+
+					#banner:after {
+						content: '';
+						background-color: #0D131A;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						opacity: 0.3; /* Dark overlay on top of the video */
+						z-index: 1;
+					}
+
+					#banner .inner {
+						position: relative;
+						z-index: 2;
+						text-align: center;
 					}
 				</style>
+				
 				<section id="banner" class="major">
+					<video autoplay muted loop id="banner-video">
+						<source src="assets/images/worship_vid.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+
 					<div class="inner">
 						<header class="major">
 							<h1>
@@ -57,16 +90,15 @@
 								<span lang="ko">서울대학교회</span>
 								<span lang="en">SNU Church</span>
 							</h1>
-						</header>
-						<div class="content">
 							<p lang="en">
 								Welcome to Seoul National University Church!
 							</p>
 							<p lang="ko">
 								서울대학교회에 오신 여러분을 환영합니다!
 							</p>
-						</div>
+						</header>
 					</div>
+					
 				</section>
 
 				<!-- Main -->
@@ -106,9 +138,9 @@
 					</style>
 					<section id="menu_tiles" class="tiles">
 						<article>
-							<!-- <span class="image">
+							<span class="image">
 								<img src="assets/images/240407.jpg" alt="" />
-							</span> -->
+							</span>
 							<header class="major">
 								<h3>
 									<a href="pages/introduction.html" class="link" lang="en">SNU Church</a>
@@ -119,9 +151,9 @@
 							</header>
 						</article>
 						<article>
-							<!-- <span class="image">
+							<span class="image">
 								<img src="assets/images/worship_pic.jpg" alt="" />
-							</span> -->
+							</span>
 							<header class="major">
 								<h3>
 									<a href="pages/service.html" class="link" lang="en">Sunday Service</a>
@@ -132,9 +164,9 @@
 							</header>
 						</article>
 						<article>
-							<!-- <span class="image">
+							<span class="image">
 								<img src="assets/images/sermon_recording.png" alt="" />
-							</span> -->
+							</span>
 							<header class="major">
 								<h3>
 									<a href="pages/service.html#videos" class="link" lang="en">Sermon</a>
@@ -145,9 +177,9 @@
 							</header>
 						</article>
 						<article>
-							<!-- <span class="image">
+							<span class="image">
 								<img src="assets/images/activity.jpg" alt="" />
-							</span> -->
+							</span>
 							<header class="major">
 								<h3>
 									<a href="pages/ministry.html" class="link" lang="en">Ministries and Activities</a>
@@ -158,9 +190,9 @@
 							</header>
 						</article>
 						<article>
-							<!-- <span class="image">
-								<img src="assets/images/logo_horizontal.jpg" alt="" />
-							</span> -->
+							<span class="image">
+								<img src="assets/images/logo_horizontal.png" alt="" />
+							</span>
 							<header class="major">
 								<h3>
 									<a href="pages/participate.html" class="link" lang="en">Get Involved</a>
