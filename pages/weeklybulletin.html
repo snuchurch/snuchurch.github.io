@@ -80,6 +80,12 @@
 								#capture .column {
 									flex: 1;
 								}
+								.column-70 {
+									flex: 0 0 70%; /* Set the width to 70% */
+								}
+								.column-30 {
+									flex: 0 0 30%; /* Set the width to 30% */
+								}
 							</style>
 							<div class="row">
 								<div class="column">
@@ -94,29 +100,32 @@
 							</div>
 							<style>
 								#bulletin-title {
-									border-bottom: solid 4px #2263b3;
+									border-bottom: solid 1em #2A7DE1;
+								}
+								#bottom-hr {
+									border-bottom: solid 1em #2A7DE1;
 								}
 								#bulletin-date {
 									text-align: right;
 								}
 								#footer .inner{
-									border-top: solid 4px #2263b3;
+									border-top: none;
 								}
 							</style>
 							<div id="bulletin-title">
 								<div class="row">
-									<div class="column">
-										<h2 lang="en">Morning Service</h2>
-										<h2 lang="ko">오전 예배</h2>
+									<div class="column-70">
+										<h1 lang="en">Morning Service</h1>
+										<h1 lang="ko">오전 예배</h1>
 									</div>
-									<div class="column" >
+									<div class="column-30" >
 										<h4 id="bulletin-date"></h4>
 									</div>
 								</div>
 							</div>
 							<br>
 							<br>
-							<div class="table-wrapper">
+							<div class="table-wrapper" id="bottom-hr">
 								<table id="bulletin-table">
 									<style>
 										#bulletin-table{
@@ -157,6 +166,25 @@
 
 				
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
 				<!-- Footer and Contacts (Same across all pages) -->
 				<footer id="footer">
 					<div class="inner">
