@@ -25,6 +25,7 @@ document.querySelectorAll('.language-selector').forEach(function(element) {
     });
 });
 
+
 // $('[lang]').hide();
 // $('[lang="ko"]').show();
 // $('#lang-switch-to-en').on('click', function () { 

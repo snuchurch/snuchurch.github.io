@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="apple-touch-icon" type="image/svg+xml" href="../assets/images/logo_rounded.svg">
+		<link rel="icon" type="image/svg+xml" href="../assets/images/logo_rounded.svg">
+		<title>SNU Church</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<style>
+		#weeklybulletin {
+			background-color: #FFFFFF;
+		}
+		#header {
+			background-color: #2263b3;
+		}
+		#menu {
+			background-color: #2263b380;
+		}
+	</style>
+	<body class="is-preload" id="weeklybulletin">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header (Same across all pages) -->
+			<header id="header">
+				<a href="../index.html" class="logo">
+					<img src="../assets/images/logo_rounded.svg" /> 
+					<span lang="ko">서울대학교회</span>
+					<span lang="en">SNUC</span>
+				</a>
+				<nav>
+					<!--lang="en"-->
+					<a lang="en" class="language-selector" data-lang="en"><mark>English</mark></a>
+					<a lang="en" class="language-selector" data-lang="ko">한국어</a>
+					<!--lang="en"-->
+					<a lang="ko" class="language-selector" data-lang="en">English</a>
+					<a lang="ko" class="language-selector" data-lang="ko"><mark>한국어</mark></a>
+					<!-- MENU/메뉴 -->
+					<a href="#menu"><span lang="ko">메뉴</span><span lang="en">Menu</span></a>
+				</nav>
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="../index.html"><p lang="en">Welcome</p><p lang="ko">환영합니다</p></a></li>
+					<li><a href="introduction.html"><p lang="en">About Us</p><p lang="ko">교회 소개</p></a></li>
+					<li><a href="service.html"><p lang="en">Service</p><p lang="ko">예배</p></a></li>
+					<li><a href="participate.html" class="button primary fit"><p lang="en">Get Inolved</p><p lang="ko">참여하기</p></a></li>
+				</ul>
+			</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- Main -->
+				<div id="main" class="alt">
+					<!-- One -->
+					<section id="capture">
+						<div class="inner">
+							<style>
+								#capture .row {
+									display: flex;
+									align-items: center;
+								}
+								#capture .column {
+									flex: 1;
+								}
+							</style>
+							<div class="row">
+								<div class="column">
+									<img onclick="captureFunction(); return false;" src="../assets/images/logo_horizontal.jpg" width="90%">
+								</div>
+								<div class="column">
+									<h4 lang="en">John 14:6</h4>
+									<p lang="en">Jesus answered, "I am the way and the truth and the life. No one comes to the Father except through me."</p>
+									<h4 lang="ko">요한복음 14:6</h4>
+									<p lang="ko">그래서 예수님이 그에게 말씀하셨다. "나는 길이요 진리요 생명이다. 나를 통하지 않고는 아무도 아버지께로 가지 못한다."</p>
+								</div>
+							</div>
+							<style>
+								#bulletin-title {
+									border-bottom: solid 4px #2263b3;
+								}
+								#bulletin-date {
+									text-align: right;
+								}
+								#footer .inner{
+									border-top: solid 4px #2263b3;
+								}
+							</style>
+							<div id="bulletin-title">
+								<div class="row">
+									<div class="column">
+										<h2 lang="en">Morning Service</h2>
+										<h2 lang="ko">오전 예배</h2>
+									</div>
+									<div class="column" >
+										<h4 id="bulletin-date"></h4>
+									</div>
+								</div>
+							</div>
+							<br>
+							<br>
+							<div class="table-wrapper">
+								<table id="bulletin-table">
+									<style>
+										#bulletin-table{
+											text-align: center;
+										}
+										
+										.hr-with-text {
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											width: 100%;
+											position: relative;
+										}
+								
+										.hr-with-text::before,
+										.hr-with-text::after {
+											content: "";
+											flex: 1;
+											border-bottom: 0.2em dotted #000;
+											margin: 0.1em;
+										}
+									</style>
+									<colgroup>
+										<col style="width: 25%;">
+										<col style="width: 50%;">
+										<col style="width: 25%;">
+									</colgroup>
+									<tbody id="bulletin-content">
+										<!-- Dynamic content will go here -->
+									</tbody>
+
+								</table>
+							</div>
+						</div>
+					</section>
+					
+				</div>
+
+				
+
+				<!-- Footer and Contacts (Same across all pages) -->
+				<footer id="footer">
+					<div class="inner">
+						<div class="row">
+							<div class="column">
+								<p>
+									<span class="icon solid fa-envelope"></span> 
+									snuchurch.info@gmail.com
+								</p>
+								<p>
+									<span class="icon solid fa-phone"></span> 
+									(+82) 000-0000-0000
+								</p>
+								<p>
+									<span class="icon solid fa-home"></span> 
+									<a href="https://place.map.kakao.com/17912381" lang="ko">서울대학교 26동 B101호 (자연대)</a>
+									<a href="https://place.map.kakao.com/17912381" lang="en">Seoul National University Building 26, Room B101</a>
+								</p>
+							</div>
+							<div class="column">
+								<p lang="ko">오전 예배 (한국어 & 영어)</p>
+								<p lang="en">Morning Service (Korean & English)</p>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/p/Seoul-National-University-Church-100064642604158/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/snuchurch_26/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.youtube.com/@snuchurch9178" class="icon brands alt fa-youtube"><span class="label">Youtube</span></a></li>
+								</ul>
+								<p lang="ko">오후 예배 (한국어 & 중국어)</p>
+								<p lang="en">Afternoon Service (Korean & Chinese)</p>
+								<ul class="icons">
+									<li><a href="https://www.instagram.com/snu_church/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.youtube.com/@user-ej2bw9vq8l" class="icon brands alt fa-youtube"><span class="label">Youtube</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<ul class="copyright">
+							<li>&copy;SNUC 2024</li>
+							<li>Design Reference: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+
+			</div>
+
+		<!-- Scripts -->
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+		<script>
+			function captureFunction() {
+				html2canvas(document.getElementById('capture')).then(function(canvas) {
+					var link = document.createElement('a');
+					link.href = canvas.toDataURL('image/jpeg');
+					link.download = 'weekly-bulletin.jpg';
+					link.click();
+				});
+			}
+		</script>
+		<script>
+			const apiKey = 'AIzaSyCHu6CPBmNlcNjoS3N06XnmZmAxuGQOnZo';
+			const sheetId = '1cQAZmfIngCiztT1dnfeLK57y6QZKhVDPgbY8H8J5xUk';
+			const range = 'Main!A1:K40';
+			const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
+
+			async function fetchSheetData() {
+				try {
+					const response = await fetch(url);
+					const data = await response.json();
+					renderBulletin(data.values);
+				} catch (error) {
+					console.error('Error fetching sheet data:', error);
+				}
+			}
+
+			function renderBulletin(data) {
+				document.getElementById('bulletin-date').textContent = data[0][0];
+				const lang = localStorage.getItem('language') || 'en';
+				const bulletinContent = document.getElementById('bulletin-content');
+				let content = '';
+			
+				for (let i = 2; i < data.length; i++) {
+					const row = data[i];
+			
+					// Check for defined and use empty string if undefined
+					const firstColumnContent = row[lang === "en" ? 2 : 1];
+					const secondColumnContent = row[lang === "en" ? 6 : 5];
+					const thirdColumnContent = row[lang === "en" ? 8 : 7];
+			
+					// Function to replace '/' with '<br>' if defined
+					const formatContent = (text) => {
+						return text ? text.replace(/\//g, '<br>') : '';
+					};
+			
+					content += `
+						<tr>
+							<td>${formatContent(firstColumnContent)}</td>
+							<td>
+								<div class="hr-with-text">
+									<span>${formatContent(secondColumnContent)}</span>
+								</div>
+							</td>
+							<td>${formatContent(thirdColumnContent)}</td>
+						</tr>
+					`;
+				}
+			
+				// Insert the content into the bulletin
+				bulletinContent.innerHTML = content; // Ensure to insert HTML correctly
+
+				const firstCell = document.querySelector('.dot-cell');
+				if (firstCell) {
+					const cellWidth = firstCell.clientWidth; // Measure width of first cell
+					const dotWidth = 3; // Approximate width of one dot (you may adjust this)
+			
+					// Calculate how many dots fit in the first cell's width
+					const numDots = Math.floor(cellWidth / dotWidth);
+					
+					// Get all cells with class 'dot-cell' and apply the calculated dots
+					const cells = document.querySelectorAll('.dot-cell');
+					cells.forEach(cell => {
+						// Set the same number of dots for all cells
+						let dots = ' · '.repeat(numDots);
+						cell.textContent = dots;
+					});
+				}
+			}
+
+			// Fetch and render sheet data when the page loads
+			fetchSheetData();
+		</script>
+
+	</body>
+</html>
