@@ -271,51 +271,36 @@
 				const bulletinContent = document.getElementById('bulletin-content');
 				let content = '';
 			
-				for (let i = 6; i < data.length; i++) {
+				for (let i = 2; i < data.length; i++) {
 					const row = data[i];
-			
-					// Check for defined and use empty string if undefined
-					const firstColumnContent = row[lang === "en" ? 2 : 1];
-					const secondColumnContent = row[lang === "en" ? 6 : 5];
-					const thirdColumnContent = row[lang === "en" ? 8 : 7];
-			
-					// Function to replace '/' with '<br>' if defined
-					const formatContent = (text) => {
-						return text ? text.replace(/\//g, '<br>') : '';
-					};
-			
-					content += `
-						<tr>
-							<td>${formatContent(firstColumnContent)}</td>
-							<td>
-								<div class="hr-with-text">
-									<span>${formatContent(secondColumnContent)}</span>
-								</div>
-							</td>
-							<td>${formatContent(thirdColumnContent)}</td>
-						</tr>
-					`;
+
+					if(row[1] == 'TRUE'){
+						// Check for defined and use empty string if undefined
+						const firstColumnContent = row[lang === "en" ? 3 : 2];
+						const secondColumnContent = row[lang === "en" ? 7 : 6];
+						const thirdColumnContent = row[lang === "en" ? 9 : 8];
+
+						// Function to replace '/' with '<br>' if defined
+						const formatContent = (text) => {
+							return text ? text.replace(/\//g, '<br>') : '';
+						};
+
+						content += `
+							<tr>
+								<td>${formatContent(firstColumnContent)}</td>
+								<td>
+									<div class="hr-with-text">
+										<span>${formatContent(secondColumnContent)}</span>
+									</div>
+								</td>
+								<td>${formatContent(thirdColumnContent)}</td>
+							</tr>
+						`;
+					}
 				}
 			
 				// Insert the content into the bulletin
 				bulletinContent.innerHTML = content; // Ensure to insert HTML correctly
-
-				const firstCell = document.querySelector('.dot-cell');
-				if (firstCell) {
-					const cellWidth = firstCell.clientWidth; // Measure width of first cell
-					const dotWidth = 3; // Approximate width of one dot (you may adjust this)
-			
-					// Calculate how many dots fit in the first cell's width
-					const numDots = Math.floor(cellWidth / dotWidth);
-					
-					// Get all cells with class 'dot-cell' and apply the calculated dots
-					const cells = document.querySelectorAll('.dot-cell');
-					cells.forEach(cell => {
-						// Set the same number of dots for all cells
-						let dots = ' · '.repeat(numDots);
-						cell.textContent = dots;
-					});
-				}
 			}
 
 			// Fetch and render sheet data when the page loads
