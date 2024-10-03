@@ -52,7 +52,7 @@
 
 				<!-- Main -->
 				<div id="main" class="alt">
-					<section id="register">
+					<section id="participate">
 						<div class="inner">
 							<header class="major" lang="en">
 								<h1>Get Involved</h1>
@@ -60,12 +60,34 @@
 							<header class="major" lang="ko">
 								<h1>참여하기</h1>
 							</header>
-							<ul class="alt">
-								<li><a class="button primary" href="https://forms.gle/S71GhQU9oxxvyvz36">Register: Friday Night Prayer Meeting</a></li>
-								<li><a class="button primary" href="https://forms.gle/S71GhQU9oxxvyvz36">Register: Summer Retreat</a></li>
-								<li><a class="button primary" href="https://forms.gle/S71GhQU9oxxvyvz36">Register: GSM</a></li>
-								<li><a class="button primary" href="https://forms.gle/S71GhQU9oxxvyvz36">Register: Summer Book Club</a></li>
-							</ul>
+							<form onsubmit="sendEmail(event)">
+								<div class="fields">
+									<div class="field">
+										<label for="name" lang="en">Name</label>
+										<label for="name" lang="ko">이름</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field half">
+										<label for="email" lang="en">Email</label>
+										<label for="email" lang="ko">이메일</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field half">
+										<label for="tel" lang="en">Phone Number</label>
+										<label for="tel" lang="ko">전화번호</label>
+										<input type="tel" name="tel" id="tel" />
+									</div>
+									<div class="field">
+										<label for="message" lang="en">Message</label>
+										<label for="message" lang="ko">메시지</label>
+										<textarea name="message" id="message" rows="6"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input lang="en" type="submit" value="Send Message" class="primary" /></li>
+									<li><input lang="ko" type="submit" value="메시지 전송" class="primary" /></li>
+								</ul>
+							</form>
 						</div>
 					</section>
 				</div>
@@ -130,7 +152,35 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
-
+			<script type="text/javascript"
+					src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+			</script>
+			<script>
+				// Initialize EmailJS
+				(function() {
+				  emailjs.init("2AY1TPmCUvveDQu-z");
+				})();
+			  
+				// Function to send the email
+				function sendEmail(event) {
+				  event.preventDefault();  // Prevent the form from submitting the traditional way
+			  
+				  // Send email using EmailJS
+				  emailjs.send('service_o1y0vqp', 'template_h9a8ulq', {
+					from_name: document.getElementById('name').value,
+					from_email: document.getElementById('email').value,
+					from_tel: document.getElementById('tel').value,
+					message: document.getElementById('message').value
+				  }).then(function(response) {
+					console.log('SUCCESS!', response.status, response.text);
+					alert('Email sent successfully!');
+					document.getElementById('participate').reset();
+				  }, function(error) {
+					console.log('FAILED...', error);
+					alert('Failed to send email.');
+				  });
+				}
+			  </script>
 
 	</body>
 </html>

@@ -1897,11 +1897,9 @@ input, select, textarea {
 	label {
 		color: #0D131A;
 		display: block;
-		font-size: 0.8em;
+		font-size: 1.1em;
 		font-weight: 600;
-		letter-spacing: 0.25em;
 		margin: 0 0 1em 0;
-		text-transform: uppercase;
 	}
 
 	input[type="text"],
@@ -1917,7 +1915,7 @@ input, select, textarea {
 		-ms-appearance: none;
 		appearance: none;
 		background: rgba(212, 212, 255, 0.035);
-		border: none;
+		border: solid 0.1em #0D131A;
 		border-radius: 0;
 		color: inherit;
 		display: block;
