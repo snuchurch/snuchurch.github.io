@@ -4027,3 +4027,35 @@ blue {
 #black {
 	color: #0D131A;
 }
+
+
+.pastor-toggle {
+display: flex;
+align-items: center;
+cursor: pointer;
+font-weight: bold;
+font-size: 1.1em;
+line-height: 1.8em;
+}
+.triangle {
+display: inline-block;
+width: 0;
+height: 0;
+margin-right: 10px;
+border-left: 7px solid transparent;
+border-right: 7px solid transparent;
+border-top: 10px solid #333;
+transition: transform 0.3s;
+transform: rotate(-90deg);
+}
+.triangle.open {
+transform: rotate(0deg); /* Pointing down when open */
+}
+.pastor-info {
+display: none;
+margin-left: 1.5em;
+}
+/* Hide triangle if no details are available */
+.no-details .triangle {
+display: none;
+}

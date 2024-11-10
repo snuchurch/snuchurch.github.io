@@ -1,3 +1,27 @@
+function toggleDetails(element) {
+	const triangle = element.querySelector('.triangle');
+	const info = element.nextElementSibling;
+
+	// Toggle the triangle rotation and visibility of details
+	if (info && info.classList.contains('pastor-info')) {
+	  if (info.style.display === "none" || info.style.display === "") {
+		info.style.display = "block";
+		triangle.classList.add('open');
+	  } else {
+		info.style.display = "none";
+		triangle.classList.remove('open');
+	  }
+	}
+  }
+
+  // Check for .pastor-info elements and add no-details class if not present
+  document.querySelectorAll('.pastor-toggle').forEach(toggle => {
+	if (!toggle.nextElementSibling || !toggle.nextElementSibling.classList.contains('pastor-info')) {
+	  toggle.classList.add('no-details');
+	}
+  });
+
+
 function setLanguage(lang) {
     localStorage.setItem('language', lang);
 }
@@ -25,6 +49,15 @@ document.querySelectorAll('.language-selector').forEach(function(element) {
     });
 });
 
+const checkboxes = document.querySelectorAll(".toggle-checkbox");
+
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener("change", () => {
+    const targetId = checkbox.getAttribute("data-target");
+    const content = document.getElementById(targetId);
+    content.style.display = checkbox.checked ? "block" : "none";
+  });
+});
 
 // $('[lang]').hide();
 // $('[lang="ko"]').show();
