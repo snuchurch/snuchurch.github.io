@@ -75,6 +75,10 @@
 					<section class="capture">
 						<div class="inner">
 							<style>
+								body, input, select, textarea {
+									font-size: 12pt;
+								}
+
 								.capture {
 									width: 1000px;
 									display: block;
@@ -266,158 +270,7 @@
 		<script src="../assets/js/util.js"></script>
 		<script src="../assets/js/main.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-		<script>
-			/*function captureFunction() {
-				html2canvas(document.getElementById('capture')).then(function(canvas) {
-					var link = document.createElement('a');
-					link.href = canvas.toDataURL('image/jpeg');
-					link.download = 'weekly-bulletin.jpg';
-					link.click();
-				});
-			}*/
-			function captureFunction() {
-				// Find all elements with the class 'capture'
-				const captureElements = document.querySelectorAll('.capture');
-			
-				// Create an array to hold promises for each html2canvas call
-				const canvasPromises = Array.from(captureElements).map(element =>
-					html2canvas(element)
-				);
-			
-				// Process all canvases once rendered
-				Promise.all(canvasPromises).then(canvases => {
-					// Determine total width and maximum height for the final canvas
-					const totalWidth = canvases.reduce((width, canvas) => width + canvas.width, 0);
-					const maxHeight = Math.max(...canvases.map(canvas => canvas.height));
-			
-					// Create a new canvas to concatenate all others horizontally
-					const compositeCanvas = document.createElement('canvas');
-					compositeCanvas.width = totalWidth;
-					compositeCanvas.height = maxHeight;
-					const ctx = compositeCanvas.getContext('2d');
-			
-					// Fill the entire composite canvas with white background
-					ctx.fillStyle = '#FFFFFF';
-					ctx.fillRect(0, 0, compositeCanvas.width, compositeCanvas.height);
-			
-					// Draw each canvas onto the composite canvas, centering vertically
-					let xOffset = 0;
-					canvases.forEach(canvas => {
-						// Calculate vertical offset to center the canvas
-						const yOffset = (maxHeight - canvas.height) / 2;
-						// Fill the area with white (optional, as the composite is already white)
-						ctx.fillStyle = '#FFFFFF';
-						ctx.fillRect(xOffset, 0, canvas.width, maxHeight);
-						// Draw the actual canvas
-						ctx.drawImage(canvas, xOffset, yOffset);
-						xOffset += canvas.width;
-					});
-			
-					// Convert the composite canvas to a data URL and download it
-					const link = document.createElement('a');
-					link.href = compositeCanvas.toDataURL('image/jpeg', 1.0); // Best quality
-					link.download = 'weekly-bulletin.jpg';
-					link.click();
-				});
-			}
-			
-			
-		</script>
-		<script>
-			const apiKey = 'AIzaSyCHu6CPBmNlcNjoS3N06XnmZmAxuGQOnZo';
-			const sheetId = '1cQAZmfIngCiztT1dnfeLK57y6QZKhVDPgbY8H8J5xUk';
-			const range = 'Main!A1:K40';
-			const range_ad = 'Advertisement!A1:D40';
-			const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
-			const url_ad = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range_ad}?key=${apiKey}`;
-
-			async function fetchSheetData() {
-				try {
-					const response = await fetch(url);
-					const data = await response.json();
-					renderBulletin(data.values);
-				} catch (error) {
-					console.error('Error fetching sheet data:', error);
-				}
-			}
-
-			async function fetchSheetDataAd() {
-				try {
-					const response_ad = await fetch(url_ad);
-					const data_ad = await response_ad.json();
-					renderAdvertisement(data_ad.values);
-				} catch (error) {
-					console.error('Error fetching sheet data:', error);
-				}
-			}
-
-			function renderBulletin(data) {
-				document.getElementById('bulletin-date').textContent = data[0][0];
-				const lang = localStorage.getItem('language') || 'en';
-				const bulletinContent = document.getElementById('bulletin-content');
-				let content = '';
-			
-				for (let i = 2; i < data.length; i++) {
-					const row = data[i];
-
-					if(row[1] == 'TRUE'){
-						// Check for defined and use empty string if undefined
-						const firstColumnContent = row[lang === "en" ? 3 : 2];
-						const secondColumnContent = row[lang === "en" ? 7 : 6];
-						const thirdColumnContent = row[lang === "en" ? 9 : 8];
-
-						// Function to replace '/' with '<br>' if defined
-						const formatContent = (text) => {
-							return text ? text.replace(/\//g, '<br>') : '';
-						};
-
-						content += `
-							<tr>
-								<td>${formatContent(firstColumnContent)}</td>
-								<td>
-									<div class="hr-with-text">
-										<span>${formatContent(secondColumnContent)}</span>
-									</div>
-								</td>
-								<td>${formatContent(thirdColumnContent)}</td>
-							</tr>
-						`;
-					}
-				}
-			
-				// Insert the content into the bulletin
-				bulletinContent.innerHTML = content; // Ensure to insert HTML correctly
-			}
-
-			function renderAdvertisement(data) {
-				const lang = localStorage.getItem('language') || 'en';
-				const advertisementContent = document.getElementById('advertisement-content');
-				let content = '';
-			
-				for (let i = 2; i < data.length; i++) {
-					const row = data[i];
-					// Check for defined and use empty string if undefined
-					const item_ad = row[lang === "en" ? 2 : 0];
-					const content_ad = row[lang === "en" ? 3 : 1];
-
-					// Function to replace '/' with '<br>' if defined
-					const formatContent = (text) => {
-						return text ? text.replace(/\//g, '<br>') : '';
-					};
-
-					content += `
-						<h2>${formatContent(item_ad)}</h2>
-						<p>${formatContent(content_ad)}</p>`;
-				}
-			
-				// Insert the content into the bulletin
-				advertisementContent.innerHTML = content; // Ensure to insert HTML correctly
-			}
-
-			// Fetch and render sheet data when the page loads
-			fetchSheetData();
-			fetchSheetDataAd();
-		</script>
-
+		<script src="../assets/js/sheetsync.js"></script>
+		<script src="../assets/js/capture.js"></script>
 	</body>
 </html>
