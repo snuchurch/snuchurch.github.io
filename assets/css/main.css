@@ -4059,3 +4059,53 @@ margin-left: 1.5em;
 .no-details .triangle {
 display: none;
 }
+
+
+
+
+
+
+
+
+
+/* Bulletin and Advertisement */
+#bulletin-table{
+	text-align: center;
+}
+#bulletin-title {
+	border-bottom: solid 1em #2A7DE1;
+}
+#bottom-hr {
+	border-bottom: solid 1em #2A7DE1;
+}
+#bulletin-date {
+	text-align: right;
+}
+#footer .inner{
+	border-top: none;
+}
+#advertisement {
+	border-top: solid 1em #2A7DE1;
+	border-bottom: solid 1em #2A7DE1;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+#ad-content {
+	font-size: 1.3em;
+}
+
+.hr-with-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+}
+
+.hr-with-text::before,
+.hr-with-text::after {
+	content: "";
+	flex: 1;
+	border-bottom: 0.2em dotted #000;
+	margin: 0.1em;
+}

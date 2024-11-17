@@ -66,7 +66,7 @@ async function fetchSheetDataAd() {
 
 function renderAdvertisement(data) {
     const lang = localStorage.getItem('language') || 'en';
-    const advertisementContent = document.getElementById('advertisement-content');
+    const advertisementContent = document.getElementById('ad-content');
     let content = '';
 
     for (let i = 2; i < data.length; i++) {
