@@ -61,7 +61,58 @@
 									<header class="major" lang="ko">
 										<h1>사역과 활동</h1>
 									</header>
-									<span class="image main"><img src="../assets/images/240623.jpg" alt="" /></span>
+
+
+									<!-- Image Slideshow -->
+									<style>
+										.ss-container {
+											position: relative;
+											display: flex;
+											align-items: center;
+											justify-content: center;
+											overflow: hidden;
+										}
+										.ss-images {
+											display: flex;
+											transition: transform 0.5s ease-in-out;
+										}
+										.ss-images img {
+											display: block;
+											max-width: 100%;
+											max-height: 100%;
+											margin: auto;
+											background: rgba(255,255,255,0);
+											object-fit: contain;
+										}
+										.nav-button {
+											position: absolute;
+											background: rgba(0, 0, 0, 0.5);
+											color: white;
+											border: none;
+											font-size: 2rem;
+											cursor: pointer;
+											padding: 10px;
+										}
+										.nav-button:hover {
+											background: rgba(0, 0, 0, 0.7);
+										}
+										.nav-button.prec {
+											left: 10px;
+										}
+										.nav-button.succ {
+											right: 10px;
+										}
+									</style>
+									<!-- <div id="slideshow" class="ss-container">
+										<div id="ss-images" class="ss-images">
+											<img src="../assets/images/240623.jpg" alt="" />
+											<img src="../assets/images/activity.jpg" alt="" />
+											<img src="../assets/images/afternoon_picnic.jpg" alt="" />
+										</div>
+										<button class="nav-button prec" onclick="prevSlide()">&#8249;</button>
+										<button class="nav-button succ" onclick="nextSlide()">&#8250;</button>
+									</div> -->
+									<span class="image main"><img src="../assets/images/240623.jpg" alt></span>
 									<p lang="ko">
 										오전 영어한국어 연합 예배와 오후 한국어예배로 나누어 예배를 비롯한 각종 사역을 다음과 같이 진행중입니다.
 									</p>
@@ -162,7 +213,7 @@
 								<p lang="en">Afternoon Service (Korean)</p>
 								<ul class="icons">
 									<li><a href="https://www.instagram.com/snu_church/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://www.youtube.com/@user-ej2bw9vq8l" class="icon brands alt fa-youtube"><span class="label">Youtube</span></a></li>
+									<li><a href="https://youtube.com/channel/UCqNhJ184DKfBWIk6kPcA6Qg?feature=shared" class="icon brands alt fa-youtube"><span class="label">Youtube</span></a></li>
 								</ul>
 							</div>
 						</div>
@@ -182,6 +233,6 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
-
+			<script src="../assets/js/slideshow.js"></script>
 	</body>
 </html>

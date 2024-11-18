@@ -118,7 +118,7 @@ input, select, textarea {
 	}
 	body, input, select, textarea {
 		color: #0D131A;
-		font-family: 'NanumSquareNeoExtraBold', "Source Sans Pro", Helvetica, sans-serif;
+		font-family: 'NanumSquareNeo', "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 17pt;
 		font-weight: 300;
 		letter-spacing: 0.025em;
@@ -171,6 +171,7 @@ input, select, textarea {
 	strong, b {
 		color: #0D131A;
 		font-weight: 600;
+		font-family: 'NanumSquareNeoExtraBold';
 	}
 
 	em, i {
@@ -188,6 +189,7 @@ input, select, textarea {
 		font-weight: 600;
 		line-height: 1.65;
 		margin: 0 0 1em 0;
+		font-family: 'NanumSquareNeoExtraBold';
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -4022,6 +4024,7 @@ input, select, textarea {
 
 blue {
 	color: #2A7DE1;
+	font-family: 'NanumSquareNeoExtraBold';
 }
 
 #black {
@@ -4033,7 +4036,7 @@ blue {
 display: flex;
 align-items: center;
 cursor: pointer;
-font-weight: bold;
+/* font-weight: bold; */
 font-size: 1.1em;
 line-height: 1.8em;
 }
@@ -4071,6 +4074,7 @@ display: none;
 /* Bulletin and Advertisement */
 #bulletin-table{
 	text-align: center;
+	font-family: 'NanumSquareNeoExtraBold';
 }
 #bulletin-title {
 	border-bottom: solid 1em #2A7DE1;
@@ -4089,6 +4093,7 @@ display: none;
 	border-bottom: solid 1em #2A7DE1;
 	padding-top: 2em;
 	padding-bottom: 2em;
+	/* font-family: 'NanumSquareNeoExtraBold'; */
 }
 #ad-content {
 	font-size: 1.3em;

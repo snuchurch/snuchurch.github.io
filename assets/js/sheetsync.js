@@ -81,8 +81,10 @@ function renderAdvertisement(data) {
         };
 
         content += `
-            <h2>${formatContent(item_ad)}</h2>
-            <p>${formatContent(content_ad)}</p>`;
+            <div>
+                <h3>${formatContent(item_ad)}</h3>
+                <p>${formatContent(content_ad)}</p>
+            </div>`;
     }
 
     // Insert the content into the bulletin
