@@ -26,7 +26,7 @@ function setLanguage(lang) {
     localStorage.setItem('language', lang);
 }
 function getLanguage() {
-    return localStorage.getItem('language') || 'en'; // Default to English if no language is set
+    return localStorage.getItem('language') || 'ko'; // Default to English if no language is set
 }
 document.addEventListener('DOMContentLoaded', function() {
     const lang = getLanguage();
